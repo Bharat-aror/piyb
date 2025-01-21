@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Moments</title>
+    <style>
+        /* Body and overall styles */
+        body {
+            background-color: #ffebee; /* Light pink background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d81b60; /* Pinkish color for heading */
+            margin-bottom: 40px;
+        }
+
+        /* Image container */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Images with animation */
+        .image {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        /* Delay for each image */
+        .image:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .image:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .image:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>btww hum dono lagte to bahut pyare hai sath mein(thu thu thu)</h1>
+
+    <!-- Image container with personal photos -->
+    <div class="image-container">
+        <img src="D:\Piyushi P\images\1.jpeg" alt="Photo 1" class="image">
+        <img src="D:\Piyushi P\images\2.jpeg" alt="Photo 2" class="image">
+        <img src="D:\Piyushi P\images\3.jpeg" alt="Photo 3" class="image">
+        
+    </div>
+    <h1>I love you soo muchhh!!! you're the bestt my bubu</h1>
+</body>
+</html>

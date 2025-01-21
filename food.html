@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Selection</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and overall styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec; /* Light pink background */
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #d81b60; /* Pinkish color for heading */
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #c2185b; /* Slightly darker pinkish color for subheadings */
+            margin: 20px 0;
+        }
+
+        /* Container for the food items */
+        .food-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+        /* Individual food item */
+        .food-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for food items */
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+
+        .food-item img {
+            max-width: 150px; /* Reduced size for images */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Button styling */
+        .submit-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #f06292; /* Pinkish color for button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #ec407a; /* Darker pink on hover */
+        }
+
+        /* Media Queries for responsiveness */
+        /* Tablet (768px or smaller) */
+        @media only screen and (max-width: 768px) {
+            .food-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+            }
+            h1 {
+                font-size: 2rem; /* Smaller font size for tablets */
+            }
+        }
+
+        /* Mobile (480px or smaller) */
+        @media only screen and (max-width: 480px) {
+            .food-container {
+                grid-template-columns: 1fr; /* 1 column for mobile */
+            }
+            h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>What Would You Like to Eat?</h1>
+
+    <form action="drink.html" method="GET"> <!-- Action will redirect to the drink selection page -->
+        <div class="food-container">
+            <div class="food-item">
+                <h2>Pizza</h2>
+                <img src="images/Pizza.jpg" alt="Pizza">
+                <input type="radio" name="food" value="Pizza" required>
+            </div>
+            <div class="food-item">
+                <h2>Pasta</h2>
+                <img src="D:\Piyushi P\images\pasta.jpg" alt="Pasta">
+                <input type="radio" name="food" value="Pasta" required>
+            </div>
+            <div class="food-item">
+                <h2>Sushi</h2>
+                <img src="D:\Piyushi P\images\sushi.jpg" alt="Sushi">
+                <input type="radio" name="food" value="Sushi" required>
+            </div>
+            <div class="food-item">
+                <h2>Pav Bhaji</h2>
+                <img src="D:\Piyushi P\images\pav bhaji.jpg" alt="Pav Bhaji">
+                <input type="radio" name="food" value="Pav Bhaji" required>
+            </div>
+            <div class="food-item">
+                <h2>Momos</h2>
+                <img src="D:\Piyushi P\images\momos.jpg" alt="Momos">
+                <input type="radio" name="food" value="Momos" required>
+            </div>
+            <div class="food-item">
+                <h2>Japanese Food</h2>
+                <img src="D:\Piyushi P\images\japanese food.jpg" alt="Japanese Food">
+                <input type="radio" name="food" value="Japanese Food" required>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</body>
+</html>

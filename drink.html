@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Selection</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and overall styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8bbd0; /* Light pink background */
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Heading styles */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #d81b60; /* Pinkish color for heading */
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #c2185b; /* Slightly darker pinkish color for subheadings */
+            margin: 20px 0;
+        }
+
+        /* Container for the drink items */
+        .drink-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            margin: 0 auto;
+        }
+
+        /* Individual drink item */
+        .drink-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for drink items */
+        .drink-item:hover {
+            transform: scale(1.05);
+        }
+
+        .drink-item img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Button styling */
+        .submit-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #f06292; /* Pinkish color for button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #ec407a; /* Darker pink on hover */
+        }
+
+        /* Media Queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            .drink-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .drink-container {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>What Would You Like to Drink?</h1>
+
+    <form action="where.html" method="GET">
+        <div class="drink-container">
+            <div class="drink-item">
+                <h2>Boba Tea (Of course, I know you'll select this!)</h2>
+                <img src="D:\Piyushi P\images\boba tea.jpg" alt="Boba Tea">
+                <input type="radio" name="drink" value="Boba Tea" required>
+            </div>
+            <div class="drink-item">
+                <h2>Cold Coffee</h2>
+                <img src="D:\Piyushi P\images\cold coffee.jpg" alt="Cold Coffee">
+                <input type="radio" name="drink" value="Cold Coffee" required>
+            </div>
+            <div class="drink-item">
+                <h2>Daruuuu!! (Hahah, I know you're not going to select this)</h2>
+                <img src="D:\Piyushi P\images\whiskey.jpg" alt="Daruu">
+                <input type="radio" name="drink" value="Daruu" required>
+            </div>
+            <div class="drink-item">
+                <h2>Ya Fir Baki Menu Mein Dekh Lenge Yar</h2>
+                <img src="D:\Piyushi P\images\drinks menu.jpg" alt="Other Drink">
+                <input type="radio" name="drink" value="Other Drink" required>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</body>
+</html>
